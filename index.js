@@ -13,7 +13,7 @@ const newsdetails = document.getElementById("newsdetails");
 var newsDataArr = [];
 
 // apis 
-const API_KEY = "9e9b7d1c2042476586e5d3584b6e7cab";
+const API_KEY = "f042ee0d448648efae0d32d9757619ca";
 const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?country=in&apiKey=";
 const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=";
 const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=";
@@ -188,7 +188,7 @@ function displayNews() {
     newsDataArr.forEach(news => {
 
         var date = news.publishedAt.split("T");
-
+        
         var col = document.createElement('div');
         col.className="col-sm-12 col-md-4 col-lg-3 p-2 card";
 
@@ -201,7 +201,7 @@ function displayNews() {
         image.src=news.urlToImage;
 
         var cardBody = document.createElement('div');
-
+        
         var newsHeading = document.createElement('h5');
         newsHeading.className = "card-title";
         newsHeading.innerHTML = news.title;
